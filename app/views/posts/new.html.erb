@@ -1,0 +1,27 @@
+<div class="main posts-new">
+  <div class="container">
+    <h1 class="form-heading">登録する</h1>
+    <%= form_tag("/posts/create") do %>
+      <div class="form">
+        <div class="form-body">
+          <% @post.errors.full_messages.each do |message| %>
+            <div class="form-error">
+              <%= message %>
+            </div>
+          <% end %>
+          <p>クライアント名</p>
+          <input name="content"></input>
+          <p>住所</p>
+          <input name="address"></<input>
+          <p>TEl</p>
+          <input name="phonenumber"></input>
+          <p>契約書状況</p>
+          <input name="agreement"></input>
+          <p>備考</p>
+          <textarea name="remarka"></textarea>
+          <input type="submit" value="登録">
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
